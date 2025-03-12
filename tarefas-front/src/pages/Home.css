@@ -1,0 +1,83 @@
+.dashboard {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.task-card {
+    background-color: var(--task-color);
+    padding: 15px;
+    width: 250px;
+    min-height: 150px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  
+    input,
+    textarea {
+      background: transparent;
+      border: none;
+      outline: none;
+      color: white; 
+      width: 100%;
+      resize: none;
+    }
+  
+    textarea {
+      height: 80px;
+      margin-top: 10px;
+    }
+  }
+.task-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.task-card {
+  padding: 15px;
+  width: 250px;
+  min-height: 150px;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  
+  &.favorite {
+    border: 2px solid gold;
+  }
+
+  .task-title {
+    width: 100%;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    font-size: 16px;
+  }
+
+  .task-desc {
+    width: 100%;
+    height: 80px;
+    margin-top: 10px;
+    border: none;
+    outline: none;
+  }
+
+  .task-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+
+    .fav-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    .delete-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+    }
+  }
+}
