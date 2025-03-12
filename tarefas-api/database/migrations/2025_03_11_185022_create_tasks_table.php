@@ -11,14 +11,14 @@ return new class extends Migration
      */
     public function up()
     {
-        // Schema::create('tasks', function (Blueprint $table) {
-        //     $table->id();
-        //     $table->string('title');
-        //     $table->text('description')->nullable();
-        //     $table->string('color')->default('#ffffff');
-        //     $table->boolean('is_favorite')->default(false);
-        //     $table->timestamps();
-        // });
+        Schema::create('tasks', function (Blueprint $table) {
+            $table->id();
+            $table->string('title');
+            $table->text('description')->nullable();
+            $table->string('color')->default('#ffffff');
+            $table->boolean('is_favorite')->default(false);
+            $table->timestamps();
+        });
     }
 
     /**
