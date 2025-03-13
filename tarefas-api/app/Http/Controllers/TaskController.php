@@ -49,20 +49,13 @@ class TaskController extends Controller
     /**
      * Atualiza uma tarefa.
      */
-    public function update(Request $request, Task $task)
+    public function update(Request $request, $id)
     {
-        $request->validate([
-            'title' => 'string|max:255',
-            'description' => 'nullable|string',
-            'color' => 'nullable|string|max:7',
-            'is_favorite' => 'boolean',
-        ]);
-
+        $task = Task::findOrFail($id);
         $task->update($request->all());
-
         return response()->json($task);
     }
-
+    
     /**
      * Deleta uma tarefa.
      */
