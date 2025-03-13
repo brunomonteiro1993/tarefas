@@ -14,7 +14,7 @@ const Home = () => {
   const [showColors, setShowColors] = useState(null);
   const [editingDescription, setEditingDescription] = useState(null);
   const [tempDescriptions, setTempDescriptions] = useState({});
-  const [draggedTask, setDraggedTask] = useState(null);
+  // const [draggedTask, setDraggedTask] = useState(null);
 
   useEffect(() => {
     fetchTasks();
@@ -93,7 +93,7 @@ const Home = () => {
                 <div
                   key={task.id}
                   className="task-card"
-                  style={{ backgroundColor: task.color, cursor: "grab" }}
+                  style={{ backgroundColor: task.color }}
                 >
                   <div className="task-header">
                     <input
