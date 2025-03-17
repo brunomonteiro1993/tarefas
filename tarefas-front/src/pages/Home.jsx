@@ -180,7 +180,6 @@ const Home = () => {
                   <div className={`task-card p-3 w-100 ${task.is_favorite ? "favorite-task" : ""}`}
                     style={{ backgroundColor: task.color }}>
 
-                    {/* Cabeçalho da Tarefa */}
                     <div className="task-header">
                       {editingTaskId === task.id ? (
                         <input
@@ -213,8 +212,6 @@ const Home = () => {
                       }}
                     />
 
-
-                    {/* Corpo da Tarefa */}
                     <div className="task-desc-container">
                       {editingTaskId === task.id ? (
                         <textarea
@@ -228,7 +225,6 @@ const Home = () => {
                       )}
                     </div>
 
-                    {/* Rodapé da Tarefa */}
                     <div className="task-footer">
                       <div className="task-actions d-flex justify-content-between">
                         <div className="d-flex">
@@ -244,7 +240,6 @@ const Home = () => {
                         </button>
                       </div>
 
-                      {/* Opções de cores */}
                       {showColors === task.id && (
                         <div className="color-options d-flex mt-2 position-absolute">
                           {colors.map((color) => (

@@ -7,17 +7,13 @@ use App\Models\Task;
 
 class TaskController extends Controller
 {
-    /**
-     * Lista todas as tarefas.
-     */
+ 
     public function index()
     {
         return response()->json(Task::orderBy('is_favorite', 'desc')->get());
     }
 
-    /**
-     * Armazena uma nova tarefa.
-     */
+ 
     public function store(Request $request)
     {
         $request->validate([
@@ -32,9 +28,7 @@ class TaskController extends Controller
         return response()->json($task, 201);
     }
 
-    /**
-     * Exibe uma tarefa específica.
-     */
+
     public function show($id)
     {
         $task = Task::find($id);
@@ -46,9 +40,7 @@ class TaskController extends Controller
         return response()->json($task);
     }
 
-    /**
-     * Atualiza uma tarefa.
-     */
+
     public function update(Request $request, $id)
     {
         $task = Task::findOrFail($id);
@@ -56,9 +48,7 @@ class TaskController extends Controller
         return response()->json($task);
     }
     
-    /**
-     * Deleta uma tarefa.
-     */
+ 
     public function destroy(Task $task)
     {
         $task->delete();
